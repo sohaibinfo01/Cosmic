@@ -24,7 +24,7 @@ class _loginState extends State<login> {
           child: Stack(
             children: [
               Container(
-                height: 900,
+                height: 800,
                 width: 400,
                 child: Image.asset("assets/splash.png", fit: BoxFit.cover,),
               ),
@@ -159,10 +159,10 @@ class _loginState extends State<login> {
                                 print(email.text.toString());
                                 print(password.text.toString());
                                 _formKey.currentState!.validate();
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(builder: (context) => home()),
-                                // );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => home()),
+                                );
                               },
                               style: TextButton.styleFrom(
                                   padding: EdgeInsets.zero,

@@ -13,7 +13,7 @@ class splashscreen extends StatefulWidget {
 class _splashscreenState extends State<splashscreen> {
   void initState(){
     super.initState();
-    Timer(Duration(seconds: 10), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => login()),
@@ -28,7 +28,7 @@ class _splashscreenState extends State<splashscreen> {
         child: Stack(
           children: [
             Container(
-              height: 900,
+              height: 800,
               width: 400,
               child: Image.asset("assets/splash.png"),
             ),

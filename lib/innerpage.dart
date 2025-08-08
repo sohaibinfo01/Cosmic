@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project2/listview.dart';
 
+import 'favourites.dart';
+
 class innerpage extends StatefulWidget {
   const innerpage({super.key});
 
@@ -18,7 +20,7 @@ class _innerpageState extends State<innerpage> {
         child: Stack(
           children: [
             Container(
-              height: 900,
+              height: 800,
               width: 400,
               child: Image(image: AssetImage("assets/splash.png")),
             ),Row(
@@ -243,7 +245,7 @@ class _innerpageState extends State<innerpage> {
                         onPressed: () {
                           Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => listview()),
+                                MaterialPageRoute(builder: (context) => favourites ()),
                           );
                         },
                       style: TextButton.styleFrom(

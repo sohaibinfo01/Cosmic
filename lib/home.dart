@@ -18,7 +18,7 @@ class _homeState extends State<home> {
             child: Stack(
               children: [
                 Container(
-                  height: 900,
+                  height: 800,
                   width: 400,
                   child: Image(image: AssetImage("assets/splash.png"),fit: BoxFit.cover,),
                 ),
