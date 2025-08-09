@@ -3,6 +3,7 @@ import 'package:project2/favourites.dart';
 import 'package:project2/fourthfile.dart';
 import 'package:project2/home.dart';
 import 'package:project2/innerpage.dart';
+import 'package:project2/listtile.dart';
 import 'package:project2/listview.dart';
 import 'package:project2/login.dart';
 import 'package:project2/myappfile.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: profile()
+      home: listtile()
     );
   }
 }

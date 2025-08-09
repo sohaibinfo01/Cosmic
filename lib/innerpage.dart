@@ -34,7 +34,12 @@ class _innerpageState extends State<innerpage> {
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.black12,width: 2)
                   ),
-                  child: Image.asset("assets/bicon.png"),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Image.asset("assets/bicon.png"),
+                  )
                 ),
                 SizedBox(width: 230,),
                 Container(
@@ -68,7 +73,7 @@ class _innerpageState extends State<innerpage> {
                   ),
                 ),
                 Container(
-                  child: Text("Earth",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+                  child: Text("Mars",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
                 ),
                 Row(
                   children: [

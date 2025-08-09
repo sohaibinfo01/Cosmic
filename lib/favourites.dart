@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/profile.dart';
 
 class favourites extends StatefulWidget {
   const favourites({super.key});
@@ -66,7 +67,15 @@ class _favouritesState extends State<favourites> {
                                   border: Border.all(
                                       color: Colors.black12, width: 2)
                               ),
-                              child: Image.asset("assets/icon_profile.png"),
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(
+                                      context,
+                                  MaterialPageRoute(builder: (context)=> profile())
+                                  );
+                                },
+                                child: Image.asset("assets/icon_profile.png"),
+                              ),
                             )
                           ],
                         ),

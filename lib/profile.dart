@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class profile extends StatefulWidget {
   const profile({super.key});
@@ -23,7 +24,7 @@ class _profileState extends State<profile> {
               children: [
                 Container(
                   margin: EdgeInsets.only(top: 40),
-                  height: 60,
+                  height: 70,
                   width: 380,
                   decoration: BoxDecoration(
                     color: Colors.black45,
@@ -32,14 +33,18 @@ class _profileState extends State<profile> {
                   child: Row(
                     children: [
                       Container(
-                        height: 50,
+                        height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Colors.black45,
+                          color: Colors.transparent,
                           shape: BoxShape.circle,
-                          border: Border.all(color: Colors.black12,width: 2)
                         ),
-                        child: Image.asset("assets/back.png"),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: Image.asset("assets/back.png"),
+                        )
                       ),
                       Container(
                         margin: EdgeInsets.only(left: 55,top: 7),
@@ -107,7 +112,7 @@ class _profileState extends State<profile> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: 20,top: 20),
+                            margin: EdgeInsets.only(left: 18 ,top: 20),
                             height: 30,
                             width: 40,
                             child: Image.asset("assets/control.png"),
@@ -115,8 +120,8 @@ class _profileState extends State<profile> {
                           Container(
                             margin: EdgeInsets.only(top: 32),
                             height: 30,
-                            width: 140,
-                            child: Text("Show planetary progress",style: TextStyle(color: Colors.white,fontSize: 12),),
+                            width: 200,
+                            child: Text(" Show planetary progress",style: TextStyle(color: Colors.white),),
                           ),
                         ],
                       ),
@@ -126,12 +131,69 @@ class _profileState extends State<profile> {
                             margin: EdgeInsets.only(top: 20),
                             height: 260,
                             width: 260,
-                            color: Colors.blue,
+                            child: new CircularPercentIndicator(
+                              radius: 110,
+                              lineWidth: 12.0,
+                              percent: 0.87,
+                              animation: true,
+                              animationDuration: 1000,
+                              circularStrokeCap: CircularStrokeCap.round,
+                              backgroundColor: Colors.grey.shade800,
+                              startAngle: 90,
+                              linearGradient: LinearGradient(colors: [
+                                Color(0xFFF961FF),
+                                Color(0xFF72A5F2),
+                                Color(0xFF00E5E5)
+                              ]),
+                              center: Column(
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.only(top: 55,left: 35),
+                                    height: 50,
+                                    width: 100,
+                                    child: Text("Personal progress",style: TextStyle(color: Colors.white,fontSize: 17,),),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(left: 27),
+                                    height: 62,
+                                    width: 140,
+                                    child: Text("87.1%",style: TextStyle(color: Color(0xff11DCE8),fontSize: 50,fontWeight: FontWeight.bold),),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            child: Image.asset("assets/on.png"),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 20,top: 4),
+                                height: 30,
+                                width: 30,
+                                child: Image.asset("assets/on.png"),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 15),
+                                height: 30,
+                                width: 200,
+                                child: Text("  Show me in Planet Rating",style: TextStyle(color: Colors.white,),),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 20,top: 10),
+                                height: 30,
+                                width: 30,
+                                child: Image.asset("assets/on.png"),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                height: 30,
+                                width: 200,
+                                child: Text("  Notifications",style: TextStyle(color: Colors.white),),
+                              )
+                            ],
                           )
                         ],
                       )
