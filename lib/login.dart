@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/Bottom_Nav.dart';
 import 'package:project2/home.dart';
 import 'package:project2/listview.dart';
 
@@ -91,18 +92,18 @@ class _loginState extends State<login> {
                             height: 50,
                             width: 300,
                             child: TextFormField(
-                              controller: password,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter your password';
-                                } else if (value.contains('@')) {
-                                  return 'Please don\'t use the @ char.';
-
-                                } else if( value.length < 8 ){
-                                  return 'Please Must be 8 characters';
-                                }
-                                return null;
-                              },
+                              // controller: password,
+                              // validator: (value) {
+                              //   if (value == null || value.isEmpty) {
+                              //     return 'Please enter your password';
+                              //   } else if (value.contains('@')) {
+                              //     return 'Please don\'t use the @ char.';
+                              //
+                              //   } else if( value.length < 8 ){
+                              //     return 'Please Must be 8 characters';
+                              //   }
+                              //   return null;
+                              // },
                               style: TextStyle(color: Colors.white),
                               cursorColor: Colors.black,
                               decoration: InputDecoration(
@@ -161,7 +162,7 @@ class _loginState extends State<login> {
                                 _formKey.currentState!.validate();
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => home()),
+                                  MaterialPageRoute(builder: (context) => bottombar()),
                                 );
                               },
                               style: TextButton.styleFrom(

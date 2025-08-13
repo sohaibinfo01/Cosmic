@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/display.dart';
 import 'package:project2/favourites.dart';
 import 'package:project2/fourthfile.dart';
 import 'package:project2/home.dart';
@@ -14,6 +15,7 @@ import 'package:project2/secondfile.dart';
 import 'package:project2/textfield.dart';
 import 'package:project2/thirdfile.dart';
 
+import 'Bottom_Nav.dart';
 import 'splash.dart';
 import 'firstfile.dart';
 import 'gridview.dart';
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: listtile()
+      home: splashscreen()
     );
   }
 }

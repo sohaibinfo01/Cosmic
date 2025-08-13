@@ -9,6 +9,11 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
+
+  bool iscontrol0 = false;
+  bool iscontrol1 = false;
+  bool iscontrol2 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +22,10 @@ class _profileState extends State<profile> {
           children: [
             Container(
               height: 800,
-              width: 400,
-              child: Image.asset("assets/splash.png"),
+              width: 500,
+              child: Image.asset("assets/splash.png",fit: BoxFit.cover,),
             ),
+            SingleChildScrollView(child:
             Column(
               children: [
                 Container(
@@ -112,16 +118,27 @@ class _profileState extends State<profile> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: 18 ,top: 20),
+                            margin: EdgeInsets.only(left: 10),
                             height: 30,
                             width: 40,
-                            child: Image.asset("assets/control.png"),
+                            child: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  iscontrol0 = !iscontrol0;
+                                });
+                              },
+                              icon: Icon(
+                                  iscontrol0 ? Icons.toggle_on : Icons.toggle_off,
+                                  color: iscontrol0 ? Color(0xff11DCE8) : Colors.grey,
+                                  size: 40,
+                              ),
+                            ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 32),
+                            margin: EdgeInsets.only(top: 36),
                             height: 30,
                             width: 200,
-                            child: Text(" Show planetary progress",style: TextStyle(color: Colors.white),),
+                            child: Text("   Show planetary progress",style: TextStyle(color: Colors.white),),
                           ),
                         ],
                       ),
@@ -166,32 +183,54 @@ class _profileState extends State<profile> {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(left: 20,top: 4),
+                                margin: EdgeInsets.only(left: 10),
                                 height: 30,
                                 width: 30,
-                                child: Image.asset("assets/on.png"),
+                                child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      iscontrol1 = !iscontrol1; // toggle state
+                                    });
+                                  },
+                                  icon: Icon(
+                                    size: 30,
+                                    Icons.check_box_outlined, // control icon
+                                    color: iscontrol1 ? Color(0xff11DCE8) : Colors.grey, // on/off color
+                                  ),
+                                ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 15),
+                                margin: EdgeInsets.only(top: 30),
                                 height: 30,
                                 width: 200,
-                                child: Text("  Show me in Planet Rating",style: TextStyle(color: Colors.white,),),
+                                child: Text("    Show me in Planet Rating",style: TextStyle(color: Colors.white,),),
                               )
                             ],
                           ),
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(left: 20,top: 10),
+                                margin: EdgeInsets.only(left: 10),
                                 height: 30,
                                 width: 30,
-                                child: Image.asset("assets/on.png"),
+                                child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      iscontrol2 = !iscontrol2; // toggle state
+                                    });
+                                  },
+                                  icon: Icon(
+                                    size: 30,
+                                    Icons.check_box_outlined, // control icon
+                                    color: iscontrol2 ? Color(0xff11DCE8) : Colors.grey, // on/off color
+                                  ),
+                                ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 20),
+                                margin: EdgeInsets.only(top: 30),
                                 height: 30,
                                 width: 200,
-                                child: Text("  Notifications",style: TextStyle(color: Colors.white),),
+                                child: Text("    Notifications",style: TextStyle(color: Colors.white,),),
                               )
                             ],
                           )
@@ -202,9 +241,11 @@ class _profileState extends State<profile> {
                 )
               ],
             )
+            )
           ],
         ),
       ),
+
     );
   }
 }

@@ -9,18 +9,29 @@ class favourites extends StatefulWidget {
 }
 
 class _favouritesState extends State<favourites> {
+
+  bool mercuryFav = false;
+  bool venusFav = false;
+  bool earthFav = false;
+  bool marsFav = false;
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+    Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
         child: Stack(
           children: [
+            // Background
             Container(
               height: 800,
               width: 400,
-              child: Image.asset("assets/splash.png"),
+              child: Image.asset("assets/splash.png", fit: BoxFit.cover),
             ),
+            SingleChildScrollView(
+              child:
             Column(
               children: [
                 Container(
@@ -150,7 +161,17 @@ class _favouritesState extends State<favourites> {
                                     color: Colors.transparent,
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.asset("assets/heart.png"),
+                                  child: IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        mercuryFav = !mercuryFav;
+                                      });
+                                    },
+                                    icon: Icon(
+                                      mercuryFav ? Icons.favorite : Icons.favorite_border,
+                                      color: mercuryFav ? Colors.red : Colors.white,
+                                    ),
+                                  ),
                                 ),
                               ],
                             )
@@ -230,7 +251,17 @@ class _favouritesState extends State<favourites> {
                                   color: Colors.transparent,
                                   shape: BoxShape.circle
                               ),
-                              child: Image.asset("assets/heart.png"),
+                              child: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    venusFav = !venusFav;
+                                  });
+                                },
+                                icon: Icon(
+                                  venusFav ? Icons.favorite : Icons.favorite_border,
+                                  color: venusFav ? Colors.red : Colors.white,
+                                ),
+                              ),
                             )
                           ],
                         )
@@ -307,7 +338,17 @@ class _favouritesState extends State<favourites> {
                                   color: Colors.transparent,
                                   shape: BoxShape.circle
                               ),
-                              child: Image.asset("assets/heart.png"),
+                              child: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    earthFav = !earthFav;
+                                  });
+                                },
+                                icon: Icon(
+                                  earthFav ? Icons.favorite : Icons.favorite_border,
+                                  color: earthFav ? Colors.red : Colors.white,
+                                ),
+                              ),
                             )
                           ],
                         )
@@ -374,28 +415,40 @@ class _favouritesState extends State<favourites> {
                             )
                           ],
                         ),
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(bottom: 50,),
-                              height: 50,
-                              width: 20,
+                         Row(
+                           children: [
+                             Container(
+                               margin: EdgeInsets.only(bottom: 50,),
+                               height: 50,
+                               width: 20,
                               decoration: BoxDecoration(
-                                  color: Colors.transparent,
+                                   color: Colors.transparent,
                                   shape: BoxShape.circle
-                              ),
-                              child: Image.asset("assets/heart.png"),
-                            )
-                          ],
-                        )
-                      ]
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+                               ),
+                               child: IconButton(
+                                 onPressed: () {
+                                   setState(() {
+                                     marsFav = !marsFav;
+                                   });
+                                 },
+                                 icon: Icon(
+                                   marsFav ? Icons.favorite : Icons.favorite_border,
+                                   color: marsFav ? Colors.red : Colors.white,
+                                 ),
+                               ),
+                           )
+                           ],
+                         )
+                       ]
+                   ),
+                 ),
+               ],
+             ),
+             ),
+           ],
+         ),
       ),
+
     );
   }
 }

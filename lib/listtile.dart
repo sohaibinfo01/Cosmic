@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class git init
+class Listtile
 extends StatefulWidget {
-  const listtile({super.key});
+  const Listtile({super.key});
 
   @override
-  State<listtile> createState() => _listtileState();
+  State<Listtile> createState() => _listtileState();
 }
 
-class _listtileState extends State<listtile> {
+class _listtileState extends State<Listtile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

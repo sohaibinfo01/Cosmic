@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project2/innerpage.dart';
+import 'package:project2/profile.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -67,7 +68,15 @@ class _homeState extends State<home> {
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.black12,width: 2)
                               ),
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context)=> profile())
+                                  );
+                                },
                               child: Image.asset("assets/icon_profile.png"),
+                            ),
                             )
                           ],
                         ),

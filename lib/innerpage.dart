@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project2/listview.dart';
-
 import 'favourites.dart';
 
 class innerpage extends StatefulWidget {
@@ -11,6 +9,9 @@ class innerpage extends StatefulWidget {
 }
 
 class _innerpageState extends State<innerpage> {
+
+  bool favourite = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +52,20 @@ class _innerpageState extends State<innerpage> {
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.black12,width: 2)
                   ),
-                  child: Image.asset("assets/heart.png"),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right:5),
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          favourite = !favourite;
+                        });
+                      },
+                      icon: Icon(
+                        favourite ? Icons.favorite : Icons.favorite_border,
+                        color: favourite ? Colors.red : Colors.white,
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),
@@ -73,7 +87,9 @@ class _innerpageState extends State<innerpage> {
                   ),
                 ),
                 Container(
-                  child: Text("Mars",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+                  child: Text("Mars",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                  ),),
                 ),
                 Row(
                   children: [
@@ -250,7 +266,7 @@ class _innerpageState extends State<innerpage> {
                         onPressed: () {
                           Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => favourites ()),
+                                MaterialPageRoute(builder: (context) => favourites()),
                           );
                         },
                       style: TextButton.styleFrom(
