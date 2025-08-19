@@ -13,6 +13,24 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: [
+            SizedBox(height: 50,),
+            Container(
+              height: 100,
+              width: 150,
+              child: Image.asset("assets/earth.png"),
+            ),
+            SizedBox(height: 50,),
+            Text("Routes"),
+            Divider(color: Colors.grey,),
+            Text("Travel"),
+            Divider(color: Colors.grey,),
+            Text("Buses"),
+          ],
+        ),
+      ),
       resizeToAvoidBottomInset: false,
       body:
           Container(
@@ -21,6 +39,7 @@ class _homeState extends State<home> {
                 Container(
                   height: 800,
                   width: 400,
+
                   child: Image(image: AssetImage("assets/splash.png"),fit: BoxFit.cover,),
                 ),
                 Container(

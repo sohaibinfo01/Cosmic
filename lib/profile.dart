@@ -189,13 +189,13 @@ class _profileState extends State<profile> {
                                 child: IconButton(
                                   onPressed: () {
                                     setState(() {
-                                      iscontrol1 = !iscontrol1; // toggle state
+                                      iscontrol1 = !iscontrol1;
                                     });
                                   },
                                   icon: Icon(
                                     size: 30,
-                                    Icons.check_box_outlined, // control icon
-                                    color: iscontrol1 ? Color(0xff11DCE8) : Colors.grey, // on/off color
+                                    Icons.check_box_outlined,
+                                    color: iscontrol1 ? Color(0xff11DCE8) : Colors.grey,
                                   ),
                                 ),
                               ),
@@ -216,16 +216,16 @@ class _profileState extends State<profile> {
                                 child: IconButton(
                                   onPressed: () {
                                     setState(() {
-                                      iscontrol2 = !iscontrol2; // toggle state
+                                      iscontrol2 = !iscontrol2;
                                     });
                                   },
                                   icon: Icon(
                                     size: 30,
-                                    Icons.check_box_outlined, // control icon
-                                    color: iscontrol2 ? Color(0xff11DCE8) : Colors.grey, // on/off color
+                                    Icons.check_box_outlined,
+                                    color: iscontrol2 ? Color(0xff11DCE8) : Colors.grey,
                                   ),
                                 ),
-                              ),
+                              ), 
                               Container(
                                 margin: EdgeInsets.only(top: 30),
                                 height: 30,

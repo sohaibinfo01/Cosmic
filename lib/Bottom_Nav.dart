@@ -32,7 +32,12 @@ class _bottombarState extends State<bottombar> {
     return Scaffold(
       extendBody: true,
       body: myscreens.elementAt(selectedindex),
-      bottomNavigationBar: BottomNavigationBar(
+    bottomNavigationBar: ClipRRect(
+    borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(35),
+    topRight: Radius.circular(35),
+    ),
+      child: BottomNavigationBar(
           currentIndex: selectedindex,
               backgroundColor: Colors.black45,
           selectedItemColor: Colors.white,
@@ -63,7 +68,8 @@ class _bottombarState extends State<bottombar> {
               label: "More",
             ),
           ]),
-        );
+        ),
+    );
 
   }
 }

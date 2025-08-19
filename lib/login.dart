@@ -66,8 +66,17 @@ class _loginState extends State<login> {
                             width: 300,
                             child: TextFormField(
                               controller: email,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter your email';
+                                }else if (value.contains('@')) {
+
+                                }
+
+                                return null;
+                              },
                               style: TextStyle(color: Colors.white),
-                              cursorColor: Colors.black,
+                              cursorColor: Colors.white,
                               decoration: InputDecoration(
                                 hintText: "Username",
                                 filled: true,
@@ -92,20 +101,20 @@ class _loginState extends State<login> {
                             height: 50,
                             width: 300,
                             child: TextFormField(
-                              // controller: password,
-                              // validator: (value) {
-                              //   if (value == null || value.isEmpty) {
-                              //     return 'Please enter your password';
-                              //   } else if (value.contains('@')) {
-                              //     return 'Please don\'t use the @ char.';
-                              //
-                              //   } else if( value.length < 8 ){
-                              //     return 'Please Must be 8 characters';
-                              //   }
-                              //   return null;
-                              // },
+                              controller: password,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter your password';
+                                } else if (value.contains('@')) {
+                                  return 'Please don\'t use the @ char.';
+
+                                } else if( value.length < 8 ){
+                                  return 'Please Must be 8 characters';
+                                }
+                                return null;
+                              },
                               style: TextStyle(color: Colors.white),
-                              cursorColor: Colors.black,
+                              cursorColor: Colors.white,
                               decoration: InputDecoration(
                                   hintText: "Password",
                                   filled: true,
@@ -121,7 +130,7 @@ class _loginState extends State<login> {
                                       borderSide: BorderSide(
                                           color: Colors.white, width: 2
                                       )
-                                  )
+                                  ),
                               ),
                               keyboardType: TextInputType.text,
                             ),
@@ -156,10 +165,7 @@ class _loginState extends State<login> {
                             ),
                             child: TextButton(
                               onPressed: () {
-                                print('Button Working');
-                                print(email.text.toString());
-                                print(password.text.toString());
-                                _formKey.currentState!.validate();
+                                if (_formKey.currentState!.validate())
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(builder: (context) => bottombar()),

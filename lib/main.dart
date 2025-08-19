@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project2/bottombar.dart';
 import 'package:project2/display.dart';
+import 'package:project2/drawer.dart';
 import 'package:project2/favourites.dart';
 import 'package:project2/fourthfile.dart';
 import 'package:project2/home.dart';
@@ -12,6 +14,9 @@ import 'package:project2/profile.dart';
 import 'package:project2/registerfile.dart';
 import 'package:project2/screenfile.dart';
 import 'package:project2/secondfile.dart';
+import 'package:project2/snackbar.dart';
+import 'package:project2/tabbar.dart';
+import 'package:project2/tabbarscreen.dart';
 import 'package:project2/textfield.dart';
 import 'package:project2/thirdfile.dart';
 
@@ -51,7 +56,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: splashscreen()
+      home: drawer()
     );
   }
 }
