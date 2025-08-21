@@ -4,12 +4,7 @@ import 'package:project2/favourites.dart';
 import 'package:project2/home.dart';
 import 'package:project2/listview.dart';
 import 'package:project2/login.dart';
-void main(){
-  runApp(MaterialApp(
-    home: bottomnavbar(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
+
 class bottomnavbar extends StatefulWidget {
   const bottomnavbar({super.key});
 
@@ -19,7 +14,7 @@ class bottomnavbar extends StatefulWidget {
 
 class _bottomnavbarState extends State<bottomnavbar> {
   int _selectedIndex = 0;
-  final List<Widget> _pages = [
+  final List<Widget> _screen = [
     home(),
   listview(),
   ListTile(),
@@ -29,7 +24,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
             Color(0xFF6EE2F5),
             Color(0xFF08AEEA)
@@ -38,14 +33,14 @@ class _bottomnavbarState extends State<bottomnavbar> {
             end: Alignment.bottomRight,
           )
         ),
-        child: _pages[_selectedIndex],
+        child: _screen[_selectedIndex],
       ),
       bottomNavigationBar: ConvexAppBar(
           style: TabStyle.react,
           backgroundColor: Colors.white,
           activeColor: Color(0xFF08AEEA),
           color: Color(0xFF08AEEA),
-          items: const [
+          items:  [
             TabItem(icon: Icons.lock_outline),
             TabItem(icon: Icons.notifications_outlined),
             TabItem(icon: Icons.delete_outlined),

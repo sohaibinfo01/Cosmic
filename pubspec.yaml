@@ -38,7 +38,8 @@ dependencies:
   percent_indicator: ^4.2.5
   curved_navigation_bar: ^1.0.6
   convex_bottom_bar: ^3.2.0
-
+  carousel_slider: ^5.0.0
+  date_format: ^2.0.9
 
 dev_dependencies:
   flutter_test:

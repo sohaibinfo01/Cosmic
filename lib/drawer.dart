@@ -18,45 +18,44 @@ class _drawerState extends State<drawer> {
       drawer: Drawer(
         child: ListView(
           children: [
-            UserAccountsDrawerHeader(accountName: const Text("Sohaib Ch"), accountEmail: const Text("sohaibinfo01@gmail.com"),
-            currentAccountPicture: const CircleAvatar(
+            UserAccountsDrawerHeader(accountName:  Text("Sohaib Ch"), accountEmail:  Text("sohaibinfo01@gmail.com"),
+            currentAccountPicture:  CircleAvatar(
               backgroundColor: Colors.white,
               child: Icon(Icons.person,size: 40,color: Colors.red,),
             ),
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               color: Colors.red,
             ),),
             ListTile(
-              leading: const Icon(Icons.send),
+              leading:  Icon(Icons.send),
               title: Text("Sent"),
               onTap: (){},
             ),
             ListTile(
-              leading: const Icon(Icons.send),
+              leading:  Icon(Icons.send),
               title: Text("Drafts"),
               onTap: (){},
             ),
             ListTile(
-              leading: const Icon(Icons.send),
+              leading:  Icon(Icons.send),
               title: Text("Archive"),
               onTap: (){},
             ),
             ListTile(
-              leading: const Icon(Icons.send),
+              leading: Icon(Icons.send),
               title: Text("Trash"),
               onTap: (){},
             ),
             ListTile(
-              leading: const Icon(Icons.send),
+              leading: Icon(Icons.send),
               title: Text("Settings"),
               onTap: (){},
             ),
             ListTile(
-              leading: const Icon(Icons.send),
-              title: Text("logout"),
+              leading: Icon(Icons.send),
+              title: Text("Logout"),
               onTap: (){},
             ),
-
           ],
         ),
       ),
@@ -67,24 +66,24 @@ class _drawerState extends State<drawer> {
             ElevatedButton(
               onPressed: (){
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("Message Sent"),
+                 SnackBar(content: Text("Message Sent"),
                 duration: Duration(seconds: 3),
                 backgroundColor: Colors.black45,
               ),
               );
             },
-              child: const Text("Send Message"),
+              child:  Text("Send Message"),
             ),
-            const SizedBox(height: 10,),
+             SizedBox(height: 10,),
             ElevatedButton(onPressed: () {
               final snackBar = SnackBar(
-                content: const Text("Message Deleted"),
-              duration: const Duration(seconds: 3),
+                content:  Text("Message Deleted"),
+              duration:  Duration(seconds: 3),
                 backgroundColor: Colors.black87,
                 action: SnackBarAction(label: "UNDO",textColor: Colors.yellow,
                     onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Message Restored"),
+                     SnackBar(content: Text("Message Restored"),
                       duration: Duration(seconds: 2),
                       backgroundColor: Colors.green,),
                   );
@@ -92,7 +91,7 @@ class _drawerState extends State<drawer> {
               );
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
-                child: const Text("Delete Message"),
+                child:  Text("Delete Message"),
             ),
           ],
         ),

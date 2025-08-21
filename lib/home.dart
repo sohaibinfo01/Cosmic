@@ -190,7 +190,6 @@ class _homeState extends State<home> {
                     ],
                   ),
                 ),
-
                 Container(
                   margin: EdgeInsets.only(top: 450,left: 30),
                   height: 200,

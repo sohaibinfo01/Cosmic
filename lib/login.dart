@@ -70,9 +70,7 @@ class _loginState extends State<login> {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter your email';
                                 }else if (value.contains('@')) {
-
                                 }
-
                                 return null;
                               },
                               style: TextStyle(color: Colors.white),
@@ -89,8 +87,7 @@ class _loginState extends State<login> {
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(25),
                                   borderSide: BorderSide(
-                                      color: Colors.white, width: 2
-                                  ),
+                                      color: Colors.white, width: 2),
                                 ),
                               ),
                               keyboardType: TextInputType.emailAddress,
