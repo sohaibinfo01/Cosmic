@@ -12,8 +12,10 @@ import 'package:project2/listtile.dart';
 import 'package:project2/listview.dart';
 import 'package:project2/login.dart';
 import 'package:project2/myappfile.dart';
+import 'package:project2/onboardingscreen.dart';
 import 'package:project2/profile.dart';
 import 'package:project2/registerfile.dart';
+import 'package:project2/safearea.dart';
 import 'package:project2/screenfile.dart';
 import 'package:project2/secondfile.dart';
 import 'package:project2/sliderfile.dart';
@@ -61,7 +63,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: facebook()
+      home: safearea()
     );
   }
 }
