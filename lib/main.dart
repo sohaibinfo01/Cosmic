@@ -6,8 +6,10 @@ import 'package:project2/drawer.dart';
 import 'package:project2/facebook.dart';
 import 'package:project2/favourites.dart';
 import 'package:project2/fourthfile.dart';
+import 'package:project2/graph.dart';
 import 'package:project2/home.dart';
 import 'package:project2/innerpage.dart';
+import 'package:project2/linechart.dart';
 import 'package:project2/listtile.dart';
 import 'package:project2/listview.dart';
 import 'package:project2/login.dart';
@@ -63,7 +65,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: safearea()
+      home: linechart()
     );
   }
 }
