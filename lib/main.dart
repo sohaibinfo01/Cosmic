@@ -26,6 +26,7 @@ import 'package:project2/tabbar.dart';
 import 'package:project2/tabbarscreen.dart';
 import 'package:project2/testfile.dart';
 import 'package:project2/textfield.dart';
+import 'package:project2/textfields.dart';
 import 'package:project2/thirdfile.dart';
 import 'package:project2/tooltip.dart';
 
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: linechart()
+      home: textfields()
     );
   }
 }

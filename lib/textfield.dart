@@ -11,6 +11,7 @@ class _textState extends State<text> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Center(
         child: Container(
           height: 600,
@@ -53,7 +54,6 @@ class _textState extends State<text> {
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide(
                         color: Colors.black26,
-
                       )
                     )
                 ),),
