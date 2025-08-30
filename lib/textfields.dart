@@ -1,5 +1,6 @@
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
+import 'package:project2/home.dart';
 import 'package:project2/linechart.dart';
 
 class textfields extends StatefulWidget {
@@ -323,7 +324,7 @@ class _textfieldsState extends State<textfields> {
                   if (_formkey.currentState!.validate())
                     Navigator.push(
                       context,
-                    MaterialPageRoute(builder: (context) => linechart()));
+                    MaterialPageRoute(builder: (context) => home()));
                 },
                     child:Text("Sign up",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),) ),
               )

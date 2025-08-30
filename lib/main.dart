@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project2/bottombar.dart';
+import 'package:project2/cameraacess.dart';
 import 'package:project2/datefile.dart';
 import 'package:project2/display.dart';
 import 'package:project2/drawer.dart';
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: textfields()
+      home: cameraacess()
     );
   }
 }
