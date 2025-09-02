@@ -12,6 +12,7 @@ import 'package:project2/home.dart';
 import 'package:project2/innerpage.dart';
 import 'package:project2/linechart.dart';
 import 'package:project2/listtile.dart';
+import 'package:project2/listview.builder.dart';
 import 'package:project2/listview.dart';
 import 'package:project2/login.dart';
 import 'package:project2/myappfile.dart';
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: cameraacess()
+      home: listviewbuilder()
     );
   }
 }
